@@ -1,13 +1,11 @@
-vagrant-ubuntu-18.04-ovpn
-=========================
+# vagrant-ubuntu-18.04-ovpn
 
 Vagrant/VirtualBox configuration to build an Ubuntu Desktop Bionic 18.04 LTS for development
 
 It's based on the box [jcaraballo/ubuntu-desktop-bionic](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-bionic),
 created as described in [its GitHub project](https://github.com/jcaraballo/vagrant-box-ubuntu-desktop-bionic)
 
-Requires
---------
+## Requirements
 
 * [Vagrant](https://www.vagrantup.com/downloads.html)
 ```
@@ -28,8 +26,7 @@ sudo apt-get install -y virtualbox-5.2 dkms
   - Download the [VirtualBox 5.2.12 Oracle VM VirtualBox Extension Pack](https://download.virtualbox.org/virtualbox/5.2.12/Oracle_VM_VirtualBox_Extension_Pack-5.2.12.vbox-extpack) from the VirtualBox site 
   - Install from the VirtualBox Manager or simply double click on the extension package file
 
-Usage
------
+## Usage
 
 ### Pre-installation
 
