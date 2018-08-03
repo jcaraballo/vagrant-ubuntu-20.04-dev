@@ -31,14 +31,16 @@ sudo apt-get install -y virtualbox-5.2 dkms
 Usage
 -----
 
-### Update box
+### Pre-installation
+
+#### Update box
 
 If you have previously downloaded [jcaraballo/ubuntu-desktop-bionic](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-bionic) you might want to update to the latest version with
 ```
 vagrant box update --box jcaraballo/ubuntu-desktop-bionic
 ```
 
-### Download Java
+#### Download Java
 
 Download Java. E.g. [jdk-10.0.2_linux-x64_bin.tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html) and save it to `resources/jdk/`. For example, if you downloaded the jdk above to `~/Downloads` do:
 ```
@@ -46,7 +48,7 @@ mkdir -p resources/jdk
 mv -i ~/Downloads/jdk-10.0.2_linux-x64_bin.tar.gz resources/jdk/
 ```
 
-### (Optional) Add ssh keys
+#### (Optional) Add ssh keys
 
 If you want the machine to be set up with some specific ssh keys (e.g. for git)
 add them to resources/ssh-keys.
@@ -61,15 +63,7 @@ cp -i ~/.ssh/id_rsa ~/.ssh/id_rsa.pub resources/ssh-keys/
 If the directory is not present or the private key is not there, no ssh keys will be set up
 
 
-### Create Vagrant image
-
-Then create the vagrant image with:
-
-```
-vagrant up
-```
-
-### (Optional) Specify name and email for git set up
+#### (Optional) Specify name and email for git set up
 
 Add a files containig the email and name for git to use globally to `resources/git/email` and `resources/git/name`. Otherwise, they won't be set up by vagrant but git will prompt you to set them up on its first usage.
 
@@ -80,7 +74,7 @@ git config --global user.email >resources/git/email
 git config --global user.name  >resources/git/name
 ```
 
-### (Optional) Provide IntelliJ Idea configuration
+#### (Optional) Provide IntelliJ Idea configuration
 
 Add the configuration directory to `resources/idea-config`
 
@@ -88,6 +82,14 @@ For example, to copy the configuration from a host with Idea 2018.2 we would do:
 ```
 mkdir -p resources/idea-config &&
 \ cd resources/idea-config && ln -s ~/.IntelliJIdea2018.2 && cd -
+```
+
+### Create Vagrant image
+
+Then create the vagrant image with:
+
+```
+vagrant up
 ```
 
 ### Post-installation
