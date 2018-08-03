@@ -1,0 +1,98 @@
+vagrant-ubuntu-18.04-ovpn
+=========================
+
+Vagrant/VirtualBox configuration to build an Ubuntu Desktop Bionic 18.04 LTS for development
+
+It's based on the box [jcaraballo/ubuntu-desktop-bionic](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-bionic),
+created as described in [its GitHub project](https://github.com/jcaraballo/vagrant-box-ubuntu-desktop-bionic)
+
+Requires
+--------
+
+* [Vagrant](https://www.vagrantup.com/downloads.html)
+```
+wget https://releases.hashicorp.com/vagrant/2.1.2/vagrant_2.1.2_x86_64.deb
+sudo dpkg -i vagrant_2.1.2_x86_64.deb
+```
+
+* [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads)
+```
+echo deb http://download.virtualbox.org/virtualbox/debian $( lsb_release -cs ) contrib | sudo tee -a /etc/apt/sources.list
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install -y virtualbox-5.2 dkms
+```
+
+* VirtualBox Extension Pack
+  - Download the [VirtualBox 5.2.12 Oracle VM VirtualBox Extension Pack](https://download.virtualbox.org/virtualbox/5.2.12/Oracle_VM_VirtualBox_Extension_Pack-5.2.12.vbox-extpack) from the VirtualBox site 
+  - Install from the VirtualBox Manager or simply double click on the extension package file
+
+Usage
+-----
+
+### Update box
+
+If you have previously downloaded [jcaraballo/ubuntu-desktop-bionic](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-bionic) you might want to update to the latest version with
+```
+vagrant box update --box jcaraballo/ubuntu-desktop-bionic
+```
+
+### Download Java
+
+Download Java. E.g. [jdk-10.0.2_linux-x64_bin.tar.gz](http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html) and save it to `resources/jdk/`. For example, if you downloaded the jdk above to `~/Downloads` do:
+```
+mkdir -p resources/jdk
+mv -i ~/Downloads/jdk-10.0.2_linux-x64_bin.tar.gz resources/jdk/
+```
+
+### (Optional) Add ssh keys
+
+If you want the machine to be set up with some specific ssh keys (e.g. for git)
+add them to resources/ssh-keys.
+
+For example, if you want the guest VM to use a copy of the host VM (warning: that will copy your private key) do:
+
+```
+mkdir -p resources/ssh-keys
+cp -i ~/.ssh/id_rsa ~/.ssh/id_rsa.pub resources/ssh-keys/
+```
+
+If the directory is not present or the private key is not there, no ssh keys will be set up
+
+
+### Create Vagrant image
+
+Then create the vagrant image with:
+
+```
+vagrant up
+```
+
+### (Optional) Specify name and email for git set up
+
+Add a files containig the email and name for git to use globally to `resources/git/email` and `resources/git/name`. Otherwise, they won't be set up by vagrant but git will prompt you to set them up on its first usage.
+
+E.g. to copy the name and email from the global git configuration of the host:
+```
+mkdir -p resources/git
+git config --global user.email >resources/git/email
+git config --global user.name  >resources/git/name
+```
+
+### (Optional) Provide IntelliJ Idea configuration
+
+Add the configuration directory to `resources/idea-config`
+
+For example, to copy the configuration from a host with Idea 2018.2 we would do:
+```
+mkdir -p resources/idea-config &&
+\ cd resources/idea-config && ln -s ~/.IntelliJIdea2018.2 && cd -
+```
+
+### Post-installation
+
+Run the post installation script as the vagrant user from a gui terminal of the guest machine:
+```
+/vagrant/post.bash
+```
