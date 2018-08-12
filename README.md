@@ -77,8 +77,8 @@ Add the configuration directory to `resources/idea-config`
 
 For example, to copy the configuration from a host with Idea 2018.2 we would do:
 ```
-mkdir -p resources/idea-config &&
-\ cd resources/idea-config && ln -s ~/.IntelliJIdea2018.2 && cd -
+mkdir -p resources/idea-config
+cp -iR ~/.IntelliJIdea2018.2 resources/idea-config/
 ```
 
 ### Create Vagrant image
