@@ -45,7 +45,7 @@ echo Installing node
 ${BOOT}/510-install-node-all-users.bash
 
 echo Installing yarn
-${BOOT}/520-install-yarn.bash
+sudo -Hu vagrant ${BOOT}/520-install-yarn.bash
 
 echo Installing elm
 sudo -Hu vagrant ${BOOT}/530-install-elm.bash
