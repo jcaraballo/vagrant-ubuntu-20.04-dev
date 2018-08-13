@@ -12,69 +12,83 @@ JDK_TAR_PATH=$( ${BOOT}/path_of_single_file_in_dir.bash ${RESOURCES}/jdk )
 DOCKER_COMPOSER_VERSION=1.22.0
 DOCKER_MACHINE_VERSION=0.15.0
 
+function heading(){
+  echo ---------------------------- >&2
+  echo $* >&2
+  echo ---------------------------- >&2
+}
+
 export DEBIAN_FRONTEND=noninteractive
 
 ${BOOT}/010-install-sbt-step-1-add-apt-sources.bash
 
-echo ----------------------------------------------------------------
-echo Updating apt sources
+heading Updating apt sources
 until apt-get update ; do echo retrying updating apt sources... ; done
-echo Updating packages
-until apt-get -y upgrade ; do echo retrying updating packages... ; done
-echo ----------------------------------------------------------------
-echo
-echo
 
+heading Updating packages
+until apt-get -y upgrade ; do echo retrying updating packages... ; done
+
+heading 'ssh keys set up'
 sudo -Hu vagrant ${BOOT}/101-maybe-set-up-ssh-keys.bash ${RESOURCES}/ssh-keys
+heading 'known_hosts set up'
 sudo -Hu vagrant ${BOOT}/102-set-up-known_hosts.bash github.com bitbucket.org
 
+heading Installing curl
 ${BOOT}/210-install-curl.bash
+heading Installing sbt
 ${BOOT}/220-install-sbt-step-2-apt-get-install.bash
+heading Installing tree
 ${BOOT}/230-install-tree.bash
+heading Installing gitk
 ${BOOT}/240-install-gitk.bash
+heading Setting up git
 sudo -Hu vagrant ${BOOT}/241-set-up-git.bash ${RESOURCES}/git/email ${RESOURCES}/git/name
 
+heading "Installing java from $JDK_TAR_PATH"
 ${BOOT}/301-install-java.bash "$JDK_TAR_PATH"
 
+heading Installing IntelliJ Idea
 sudo -Hu vagrant ${BOOT}/410-install-idea-step-1-install.bash "$IDEA_URL" "${VH}/tools"
 ${BOOT}/411-install-idea-step-2-increase-fs-user-watches.bash
 sudo -Hu vagrant ${BOOT}/412-maybe-copy-idea-config.bash ${RESOURCES}/idea-config "${VH}"
 
+heading Installing WebStorm
 sudo -Hu vagrant ${BOOT}/420-install-webstorm.bash "$WEBSTORM_URL" "${VH}/tools"
 
+heading Installing Node
 ${BOOT}/510-install-node-all-users.bash "$NODE_URL"
 
-echo Installing yarn
+heading Installing yarn
 sudo -Hu vagrant ${BOOT}/520-install-yarn.bash
 
-echo Installing elm
+heading Installing elm
 sudo -Hu vagrant ${BOOT}/530-install-elm.bash
 
-echo 'Installing Conscript and g8 (g8 needs cs)'
+heading 'Installing Conscript and g8 (g8 needs cs)'
 sudo -Hu vagrant ${BOOT}/610-install-conscript.bash
 sudo -Hu vagrant ${BOOT}/611-install-g8.bash
 
-echo 'Installing heroku cli'
+heading 'Installing heroku cli'
 ${BOOT}/620-install-heroku-cli.bash
 
-echo 'Installing Docker CE'
+heading 'Installing Docker CE'
 ${BOOT}/701-install-docker-ce.bash vagrant
 
-echo 'Installing Docker Compose'
+heading 'Installing Docker Compose'
 ${BOOT}/702-install-docker-compose.bash "$DOCKER_COMPOSER_VERSION"
 
-echo 'Installing Docker Machine'
+heading 'Installing Docker Machine'
 ${BOOT}/703-install-docker-machine.bash "$DOCKER_MACHINE_VERSION"
 
-echo Installing Chromium
+heading Installing Chromium
 apt-get -y install chromium-browser
 
-echo 'Installing PostgreSQL 10 and PostGIS'
+heading 'Installing PostgreSQL 10 and PostGIS'
 ${BOOT}/710-install-postgresql-10-and-postgis.bash
 
-echo 'Installing Zoom'
+heading 'Installing Zoom'
 ${BOOT}/720-install-zoom.bash
 
-echo 'Installing Slack'
+heading 'Installing Slack'
 ${BOOT}/730-install-slack.bash
 
