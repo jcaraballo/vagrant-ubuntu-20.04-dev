@@ -1,4 +1,4 @@
-# vagrant-ubuntu-18.04-ovpn
+# vagrant-ubuntu-18.04-dev
 
 Vagrant/VirtualBox configuration to build an Ubuntu Desktop Bionic 18.04 LTS for development
 
@@ -30,11 +30,16 @@ sudo apt-get install -y virtualbox-5.2 dkms
 
 ### Pre-installation
 
-#### Update box
-
-If you have previously downloaded [jcaraballo/ubuntu-desktop-bionic](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-bionic) you might want to update to the latest version with
+### Clone this repository
+E.g.:
 ```
-vagrant box update --box jcaraballo/ubuntu-desktop-bionic
+git clone https://github.com/jcaraballo/vagrant-ubuntu-18.04-dev.git
+```
+
+### Make it your current directory
+E.g. after the step above:
+```
+cd vagrant-ubuntu-18.04-dev
 ```
 
 #### Download Java
@@ -81,6 +86,23 @@ mkdir -p resources/idea-config
 cp -iR ~/.IntelliJIdea2018.2 resources/idea-config/
 ```
 
+#### (Optional) Update box
+
+If you have previously downloaded [jcaraballo/ubuntu-desktop-bionic](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-bionic) you might want to update to the latest version with
+```
+vagrant box update --box jcaraballo/ubuntu-desktop-bionic
+```
+
+#### (Optional) Tweak the memory and cpus
+Change the memory and cpu settings in Vagrantfile to suit your host. I recommend you to select as many cpus as the host and a good chunk of your memory, but not all of it.
+
+For example in a host with 32 Gb RAM and 8 CPUs I would assign 24 Gb RAM and 8 CPUs to the VM by changing `vb.memory` and `vb.cpus` to:
+```
+vb.memory = 24576
+vb.cpus  = 8
+```
+
+
 ### Create Vagrant image
 
 Then create the vagrant image with:
@@ -95,3 +117,9 @@ Run the post installation script as the vagrant user from a gui terminal of the 
 ```
 /vagrant/post.bash
 ```
+
+### Restart
+```
+vagrant reload
+```
+Remember that you need to **restart by running `vagrant reload` in the host** from the directory where the `Vagrantfile` is (the root of this repo) in order to restart the VM if you want vagrant to do its tweaks, including mounting `/vagrant`
