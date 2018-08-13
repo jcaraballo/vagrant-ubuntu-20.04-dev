@@ -61,8 +61,8 @@ ${BOOT}/510-install-node-all-users.bash "$NODE_URL"
 heading Installing yarn
 sudo -Hu vagrant ${BOOT}/520-install-yarn.bash
 
-heading Installing elm
-sudo -Hu vagrant ${BOOT}/530-install-elm.bash
+#heading Installing elm
+#sudo -Hu vagrant ${BOOT}/530-install-elm.bash
 
 heading 'Installing Conscript and g8 (g8 needs cs)'
 sudo -Hu vagrant ${BOOT}/610-install-conscript.bash
