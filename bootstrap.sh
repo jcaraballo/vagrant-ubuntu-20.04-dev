@@ -6,6 +6,7 @@ RESOURCES=/vagrant/resources
 
 IDEA_URL='https://download.jetbrains.com/idea/ideaIU-2018.2.1.tar.gz'
 WEBSTORM_URL='https://download-cf.jetbrains.com/webstorm/WebStorm-2018.1.2.tar.gz'
+NODE_URL='https://nodejs.org/dist/v8.10.0/node-v8.10.0-linux-x64.tar.xz'
 JDK_TAR_PATH=$( ${BOOT}/path_of_single_file_in_dir.bash ${RESOURCES}/jdk )
 
 DOCKER_COMPOSER_VERSION=1.22.0
@@ -41,8 +42,7 @@ sudo -Hu vagrant ${BOOT}/412-maybe-copy-idea-config.bash ${RESOURCES}/idea-confi
 
 sudo -Hu vagrant ${BOOT}/420-install-webstorm.bash "$WEBSTORM_URL" "${VH}/tools"
 
-echo Installing node
-${BOOT}/510-install-node-all-users.bash
+${BOOT}/510-install-node-all-users.bash "$NODE_URL"
 
 echo Installing yarn
 sudo -Hu vagrant ${BOOT}/520-install-yarn.bash
