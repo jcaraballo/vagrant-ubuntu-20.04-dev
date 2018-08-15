@@ -44,6 +44,9 @@ ${BOOT}/240-install-gitk.bash
 heading Setting up git
 sudo -Hu vagrant ${BOOT}/241-set-up-git.bash ${RESOURCES}/git/email ${RESOURCES}/git/name
 
+heading Installing Chromium
+${BOOT}/250-as-root-install-chromium.bash
+
 heading "Installing java from $JDK_TAR_PATH"
 ${BOOT}/301-install-java.bash "$JDK_TAR_PATH"
 
@@ -79,9 +82,6 @@ ${BOOT}/702-install-docker-compose.bash "$DOCKER_COMPOSER_VERSION"
 
 heading 'Installing Docker Machine'
 ${BOOT}/703-install-docker-machine.bash "$DOCKER_MACHINE_VERSION"
-
-heading Installing Chromium
-apt-get -y install chromium-browser
 
 heading 'Installing PostgreSQL 10 and PostGIS'
 ${BOOT}/710-install-postgresql-10-and-postgis.bash
