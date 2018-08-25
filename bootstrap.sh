@@ -6,7 +6,6 @@ RESOURCES=/vagrant/resources
 
 IDEA_URL='https://download.jetbrains.com/idea/ideaIU-2018.2.1.tar.gz'
 WEBSTORM_URL='https://download-cf.jetbrains.com/webstorm/WebStorm-2018.1.2.tar.gz'
-NODE_URL='https://nodejs.org/dist/v8.10.0/node-v8.10.0-linux-x64.tar.xz'
 JDK_TAR_PATH=$( ${BOOT}/path_of_single_file_in_dir.bash ${RESOURCES}/jdk )
 
 DOCKER_COMPOSER_VERSION=1.22.0
@@ -59,13 +58,14 @@ heading Installing WebStorm
 sudo -Hu vagrant ${BOOT}/420-install-webstorm.bash "$WEBSTORM_URL" "${VH}/tools"
 
 heading Installing Node
-${BOOT}/510-install-node-all-users.bash "$NODE_URL"
+${BOOT}/510-install-node-all-users.bash
 
 heading Installing yarn
-sudo -Hu vagrant ${BOOT}/520-install-yarn.bash
+${BOOT}/520-as-root-install-yarn.bash
+sudo -Hu vagrant ${BOOT}/521-as-vagrant-add-yarn-to-path.bash
 
-#heading Installing elm
-#sudo -Hu vagrant ${BOOT}/530-install-elm.bash
+heading Installing elm
+sudo -Hu vagrant ${BOOT}/530-install-elm.bash
 
 heading 'Installing heroku cli'
 ${BOOT}/620-install-heroku-cli.bash
