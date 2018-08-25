@@ -67,10 +67,6 @@ sudo -Hu vagrant ${BOOT}/520-install-yarn.bash
 #heading Installing elm
 #sudo -Hu vagrant ${BOOT}/530-install-elm.bash
 
-heading 'Installing Conscript and g8 (g8 needs cs)'
-sudo -Hu vagrant ${BOOT}/610-install-conscript.bash
-sudo -Hu vagrant ${BOOT}/611-install-g8.bash
-
 heading 'Installing heroku cli'
 ${BOOT}/620-install-heroku-cli.bash
 
