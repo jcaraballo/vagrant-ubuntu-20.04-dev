@@ -82,9 +82,6 @@ ${BOOT}/703-install-docker-machine.bash "$DOCKER_MACHINE_VERSION"
 heading 'Installing PostgreSQL 10 and PostGIS'
 ${BOOT}/710-install-postgresql-10-and-postgis.bash
 
-heading 'Installing Zoom'
-${BOOT}/720-install-zoom.bash
-
 heading 'Installing Slack'
 ${BOOT}/730-install-slack.bash
 
