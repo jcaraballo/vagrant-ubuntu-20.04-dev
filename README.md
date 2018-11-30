@@ -1,9 +1,9 @@
-# vagrant-ubuntu-18.04-dev
+# vagrant-ubuntu-18.10-dev
 
-Vagrant/VirtualBox configuration to build an Ubuntu Desktop Bionic 18.04 LTS for development
+Vagrant/VirtualBox configuration to build an Ubuntu Desktop 18.10 (Cosmic Cuttlefish) for development
 
-It's based on the box [jcaraballo/ubuntu-desktop-bionic](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-bionic),
-created as described in [its GitHub project](https://github.com/jcaraballo/vagrant-box-ubuntu-desktop-bionic)
+It's based on the box [jcaraballo/ubuntu-desktop-cosmic](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-cosmic),
+created as described in [its GitHub project](https://github.com/jcaraballo/vagrant-box-ubuntu-desktop-cosmic)
 
 ## Requirements
 
@@ -33,13 +33,13 @@ sudo apt-get install -y virtualbox-5.2 dkms
 ### Clone this repository
 E.g.:
 ```
-git clone https://github.com/jcaraballo/vagrant-ubuntu-18.04-dev.git
+git clone https://github.com/jcaraballo/vagrant-ubuntu-18.10-dev.git
 ```
 
 ### Make it your current directory
 E.g. after the step above:
 ```
-cd vagrant-ubuntu-18.04-dev
+cd vagrant-ubuntu-18.10-dev
 ```
 
 #### Download Java
@@ -88,9 +88,9 @@ cp -iR ~/.IntelliJIdea2018.3 resources/idea-config/
 
 #### (Optional) Update box
 
-If you have previously downloaded [jcaraballo/ubuntu-desktop-bionic](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-bionic) you might want to update to the latest version with
+If you have previously downloaded [jcaraballo/ubuntu-desktop-cosmic](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-cosmic) you might want to update to the latest version with
 ```
-vagrant box update --box jcaraballo/ubuntu-desktop-bionic
+vagrant box update --box jcaraballo/ubuntu-desktop-cosmic
 ```
 
 #### (Optional) Tweak the memory and cpus
