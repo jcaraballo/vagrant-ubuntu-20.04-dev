@@ -55,8 +55,8 @@ sudo -Hu vagrant ${BOOT}/410-install-idea-step-1-install.bash "$IDEA_URL" "${VH}
 ${BOOT}/411-install-idea-step-2-increase-fs-user-watches.bash
 sudo -Hu vagrant ${BOOT}/412-maybe-copy-idea-config.bash ${RESOURCES}/idea-config "${VH}"
 
-heading Installing WebStorm
-sudo -Hu vagrant ${BOOT}/420-install-webstorm.bash "$WEBSTORM_URL" "${VH}/tools"
+#heading Installing WebStorm
+#sudo -Hu vagrant ${BOOT}/420-install-webstorm.bash "$WEBSTORM_URL" "${VH}/tools"
 
 heading Installing Node
 ${BOOT}/510-install-node-all-users.bash
