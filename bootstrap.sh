@@ -9,7 +9,7 @@ WEBSTORM_URL='https://download-cf.jetbrains.com/webstorm/WebStorm-2018.1.2.tar.g
 JDK_TAR_PATH=$( ${BOOT}/path_of_single_file_in_dir.bash ${RESOURCES}/jdk )
 
 DOCKER_COMPOSER_VERSION=1.24.0
-DOCKER_MACHINE_VERSION=0.15.0
+DOCKER_MACHINE_VERSION=0.16.0
 
 function heading(){
   echo ---------------------------- >&2
