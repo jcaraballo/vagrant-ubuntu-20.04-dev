@@ -83,7 +83,7 @@ Add the configuration directory to `resources/idea-config`
 For example, to copy the configuration from a host with Idea 2018.3 we would do:
 ```
 mkdir -p resources/idea-config
-cp -iR ~/.IntelliJIdea2018.3 resources/idea-config/
+cp -iR ~/.IntelliJIdea2019.1 resources/idea-config/
 ```
 
 #### (Optional) Update box
