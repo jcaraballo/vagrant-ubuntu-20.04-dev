@@ -71,14 +71,9 @@ sudo -Hu vagrant ${BOOT}/530-install-elm.bash
 heading 'Installing heroku cli'
 ${BOOT}/620-install-heroku-cli.bash
 
-heading 'Installing Docker CE'
-${BOOT}/701-install-docker-ce.bash vagrant
-
-heading 'Installing Docker Compose'
-${BOOT}/702-install-docker-compose.bash "$DOCKER_COMPOSER_VERSION"
-
-heading 'Installing Docker Machine'
-${BOOT}/703-install-docker-machine.bash "$DOCKER_MACHINE_VERSION"
+heading 'Installing Docker Rootless'
+${BOOT}/705-as-root-install-docker-rootless-dependency-uidmap.bash
+sudo -Hu vagrant ${BOOT}/706-as-vagrant-install-docker-rootless.bash
 
 heading 'Installing PostgreSQL 10 and PostGIS'
 ${BOOT}/710-install-postgresql-10-and-postgis.bash
