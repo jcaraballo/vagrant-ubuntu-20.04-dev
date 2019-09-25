@@ -4,7 +4,7 @@ VH=/home/vagrant
 BOOT=/vagrant/boot
 RESOURCES=/vagrant/resources
 
-IDEA_URL='https://download-cf.jetbrains.com/idea/ideaIU-2019.2.2.tar.gz'
+IDEA_URL='https://download-cf.jetbrains.com/idea/ideaIU-2019.2.3.tar.gz'
 WEBSTORM_URL='https://download-cf.jetbrains.com/webstorm/WebStorm-2018.1.2.tar.gz'
 JDK_TAR_PATH=$( ${BOOT}/path_of_single_file_in_dir.bash ${RESOURCES}/jdk )
 
