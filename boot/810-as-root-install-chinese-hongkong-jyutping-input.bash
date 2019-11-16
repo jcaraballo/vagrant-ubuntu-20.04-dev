@@ -10,7 +10,6 @@ echo 'Add Cantonese Jyutping by the following:'
 echo '* restart'
 echo '* Language Support => Install/Remove Languages => select Chinese Traditional => Apply'
 echo '* Language Support => Install/Remove Languages => select Chinese Simplified => Apply'
-echo '* restart'
 echo '* Language and Region => + => Chinese (Hong Kong) => Chinese (Jyutping) => Add'
 
 # Some of these packages might automate part of the above
