@@ -1,9 +1,9 @@
-# vagrant-ubuntu-18.10-dev
+# vagrant-ubuntu-19.10-dev
 
-Vagrant/VirtualBox configuration to build an Ubuntu Desktop 18.10 (Cosmic Cuttlefish) for development
+Vagrant/VirtualBox configuration to build an Ubuntu Desktop 19.10 (Eoan Ermine) for development
 
-It's based on the box [jcaraballo/ubuntu-desktop-cosmic](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-cosmic),
-created as described in [its GitHub project](https://github.com/jcaraballo/vagrant-box-ubuntu-desktop-cosmic)
+It's based on the box [jcaraballo/ubuntu-desktop-eoan](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-eoan),
+created as described in [its GitHub project](https://github.com/jcaraballo/vagrant-box-ubuntu-desktop-eoan)
 
 ## Requirements
 
@@ -33,13 +33,13 @@ sudo apt-get install -y virtualbox-6.0 dkms
 ### Clone this repository
 E.g.:
 ```
-git clone https://github.com/jcaraballo/vagrant-ubuntu-18.10-dev.git
+git clone https://github.com/jcaraballo/vagrant-ubuntu-19.10-dev.git
 ```
 
 ### Make it your current directory
 E.g. after the step above:
 ```
-cd vagrant-ubuntu-18.10-dev
+cd vagrant-ubuntu-19.10-dev
 ```
 
 #### Download Java
@@ -88,9 +88,9 @@ cp -iR ~/.IntelliJIdea2019.2 resources/idea-config/
 
 #### (Optional) Update box
 
-If you have previously downloaded [jcaraballo/ubuntu-desktop-cosmic](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-cosmic) you might want to update to the latest version with
+If you have previously downloaded [jcaraballo/ubuntu-desktop-eoan](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-eoan) you might want to update to the latest version with
 ```
-vagrant box update --box jcaraballo/ubuntu-desktop-cosmic
+vagrant box update --box jcaraballo/ubuntu-desktop-eoan
 ```
 
 #### (Optional) Tweak the memory and cpus
