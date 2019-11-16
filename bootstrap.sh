@@ -81,3 +81,6 @@ ${BOOT}/710-install-postgresql-10-and-postgis.bash
 heading 'Installing Slack'
 ${BOOT}/730-install-slack.bash
 
+heading 'Installing Chinese Hong Kong Cantonese Jyutping input support'
+${BOOT}/810-as-root-install-chinese-hongkong-jyutping-input.bash
+
