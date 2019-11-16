@@ -44,10 +44,10 @@ cd vagrant-ubuntu-19.10-dev
 
 #### Download Java
 
-Download Java. E.g. [jdk-11.0.1_linux-x64_bin.tar.gz](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html) and save it to `resources/jdk/`. For example, if you downloaded the jdk above to `~/Downloads` do:
+Download Java. E.g. [jdk-13.0.1_linux-x64_bin.tar.gz](https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html) and save it to `resources/jdk/`. For example, if you downloaded the jdk above to `~/Downloads` do:
 ```
 mkdir -p resources/jdk
-mv -i ~/Downloads/jdk-11.0.1_linux-x64_bin.tar.gz resources/jdk/
+mv -i ~/Downloads/jdk-13.0.1_linux-x64_bin.tar.gz resources/jdk/
 ```
 
 #### (Optional) Add ssh keys
