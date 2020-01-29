@@ -84,6 +84,9 @@ ${BOOT}/730-install-slack.bash
 heading 'Installing mbpoll (cli client to talk to a ModBus slave)'
 ${BOOT}/740-as-root-install-mbpoll.bash
 
+heading 'Installing aws cli'
+${BOOT}/750-as-root-install-awscli.bash
+
 heading 'Installing Chinese Hong Kong Cantonese Jyutping input support'
 ${BOOT}/810-as-root-install-chinese-hongkong-jyutping-input.bash
 
