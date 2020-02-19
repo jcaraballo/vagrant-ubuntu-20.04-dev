@@ -43,6 +43,8 @@ ${BOOT}/240-install-gitk.bash
 heading Setting up git
 sudo -Hu vagrant ${BOOT}/241-set-up-git.bash ${RESOURCES}/git/email ${RESOURCES}/git/name
 ${BOOT}/245-as-root-install-tig.bash
+heading Installing git-crypt
+${BOOT}/247-as-root-install-git-crypt.bash
 
 heading Installing Chromium
 ${BOOT}/250-as-root-install-chromium.bash
