@@ -33,6 +33,8 @@ sudo -Hu vagrant ${BOOT}/102-set-up-known_hosts.bash github.com bitbucket.org
 
 heading Installing curl
 ${BOOT}/210-install-curl.bash
+heading Installing jq
+${BOOT}/212-as-root-install-jq.bash
 heading Installing sbt
 ${BOOT}/220-install-sbt-step-2-apt-get-install.bash
 heading Installing tree
