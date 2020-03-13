@@ -8,8 +8,7 @@ IDEA_URL='https://download-cf.jetbrains.com/idea/ideaIU-2019.3.2.tar.gz'
 WEBSTORM_URL='https://download-cf.jetbrains.com/webstorm/WebStorm-2018.1.2.tar.gz'
 JDK_TAR_PATH=$( ${BOOT}/path_of_single_file_in_dir.bash ${RESOURCES}/jdk )
 
-DOCKER_COMPOSER_VERSION=1.24.0
-DOCKER_MACHINE_VERSION=0.16.0
+DOCKER_COMPOSER_VERSION=1.25.4
 
 function heading(){
   echo ---------------------------- >&2
@@ -72,6 +71,12 @@ sudo -Hu vagrant ${BOOT}/530-install-elm.bash
 
 heading 'Installing heroku cli'
 ${BOOT}/620-install-heroku-cli.bash
+
+heading 'Installing Docker CE'
+${BOOT}/701-install-docker-ce.bash vagrant
+
+heading 'Installing Docker Compose'
+${BOOT}/702-install-docker-compose.bash "$DOCKER_COMPOSER_VERSION"
 
 heading 'Installing Docker Rootless'
 ${BOOT}/705-as-root-install-docker-rootless-dependency-uidmap.bash

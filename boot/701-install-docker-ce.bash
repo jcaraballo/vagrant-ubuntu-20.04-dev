@@ -17,5 +17,5 @@ add-apt-repository \
    stable" && \
 apt-get update && \
 apt-get install -y docker-ce && \
-service docker start && \
-usermod -aG docker ${docker_user}
+service docker start #&& \
+#usermod -aG docker ${docker_user}
