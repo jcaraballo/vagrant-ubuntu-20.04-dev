@@ -12,9 +12,9 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
 
 # Using bionic for cosmic because there's no version for cosmic available atm
 add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   bionic \
-   stable" && \
+    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+    $(lsb_release -cs) \
+    stable" && \
 apt-get update && \
 apt-get install -y docker-ce && \
 service docker start #&& \
