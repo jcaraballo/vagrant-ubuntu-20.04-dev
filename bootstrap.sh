@@ -96,6 +96,9 @@ ${BOOT}/740-as-root-install-mbpoll.bash
 heading 'Installing aws cli'
 ${BOOT}/750-as-root-install-awscli.bash
 
+heading 'Installing influxdb client'
+${BOOT}/760-as-root-install-influxdb-client.bash
+
 heading 'Installing Chinese Hong Kong Cantonese Jyutping input support'
 ${BOOT}/810-as-root-install-chinese-hongkong-jyutping-input.bash
 
