@@ -1,9 +1,9 @@
-# vagrant-ubuntu-19.10-dev
+# vagrant-ubuntu-20.04-dev
 
-Vagrant/VirtualBox configuration to build an Ubuntu Desktop 19.10 (Eoan Ermine) for development
+Vagrant/VirtualBox configuration to build an Ubuntu Desktop 20.04 LTS (Focal Fossa) for development
 
-It's based on the box [jcaraballo/ubuntu-desktop-eoan](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-eoan),
-created as described in [its GitHub project](https://github.com/jcaraballo/vagrant-box-ubuntu-desktop-eoan)
+It's based on the box [jcaraballo/ubuntu-desktop-focal](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-focal),
+created as described in [its GitHub project](https://github.com/jcaraballo/vagrant-box-ubuntu-desktop-focal)
 
 ## Requirements
 
@@ -23,7 +23,7 @@ sudo apt-get install -y virtualbox-6.0 dkms
 ```
 
 * VirtualBox Extension Pack
-  - Download the [VirtualBox 6.0.14 Oracle VM VirtualBox Extension Pack](https://download.virtualbox.org/virtualbox/6.0.14/Oracle_VM_VirtualBox_Extension_Pack-6.0.14.vbox-extpack) from the VirtualBox site
+  - Download the [VirtualBox 6.0.22 Oracle VM VirtualBox Extension Pack](https://download.virtualbox.org/virtualbox/6.0.22/Oracle_VM_VirtualBox_Extension_Pack-6.0.22.vbox-extpack) from the VirtualBox site
   - Install from the VirtualBox Manager or simply double click on the extension package file
 
 ## Usage
@@ -33,13 +33,13 @@ sudo apt-get install -y virtualbox-6.0 dkms
 ### Clone this repository
 E.g.:
 ```
-git clone https://github.com/jcaraballo/vagrant-ubuntu-19.10-dev.git
+git clone https://github.com/jcaraballo/vagrant-ubuntu-20.04-dev.git
 ```
 
 ### Make it your current directory
 E.g. after the step above:
 ```
-cd vagrant-ubuntu-19.10-dev
+cd vagrant-ubuntu-20.04-dev
 ```
 
 #### Download Java
@@ -88,9 +88,9 @@ cp -iR ~/.IntelliJIdea2019.2 resources/idea-config/
 
 #### (Optional) Update box
 
-If you have previously downloaded [jcaraballo/ubuntu-desktop-eoan](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-eoan) you might want to update to the latest version with
+If you have previously downloaded [jcaraballo/ubuntu-desktop-focal](https://app.vagrantup.com/jcaraballo/boxes/ubuntu-desktop-focal) you might want to update to the latest version with
 ```
-vagrant box update --box jcaraballo/ubuntu-desktop-eoan
+vagrant box update --box jcaraballo/ubuntu-desktop-focal
 ```
 
 #### (Optional) Tweak the memory and cpus
