@@ -42,13 +42,7 @@ E.g. after the step above:
 cd vagrant-ubuntu-20.04-dev
 ```
 
-#### Download Java
-
-Download Java. E.g. [jdk-13.0.1_linux-x64_bin.tar.gz](https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html) and save it to `resources/jdk/`. For example, if you downloaded the jdk above to `~/Downloads` do:
-```
-mkdir -p resources/jdk
-mv -i ~/Downloads/jdk-13.0.1_linux-x64_bin.tar.gz resources/jdk/
-```
+### Resources
 
 #### (Optional) Add ssh keys
 

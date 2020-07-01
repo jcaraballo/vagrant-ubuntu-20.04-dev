@@ -50,8 +50,8 @@ ${BOOT}/247-as-root-install-git-crypt.bash
 heading Installing Chromium
 ${BOOT}/250-as-root-install-chromium.bash
 
-heading "Installing java from $JDK_TAR_PATH"
-${BOOT}/301-install-java.bash "$JDK_TAR_PATH"
+heading Installing openjdk
+${BOOT}/302-as-root-install-openjdk.bash
 
 heading Installing IntelliJ Idea
 sudo -Hu vagrant ${BOOT}/410-install-idea-step-1-install.bash "$IDEA_URL" "${VH}/tools"
