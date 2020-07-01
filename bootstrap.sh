@@ -55,7 +55,7 @@ ${BOOT}/302-as-root-install-openjdk.bash
 heading Installing IntelliJ Idea
 sudo -Hu vagrant ${BOOT}/410-install-idea-step-1-install.bash "$IDEA_URL" "${VH}/tools"
 ${BOOT}/411-install-idea-step-2-increase-fs-user-watches.bash
-sudo -Hu vagrant ${BOOT}/412-maybe-copy-idea-config.bash ${RESOURCES}/idea-config "${VH}"
+sudo -Hu vagrant ${BOOT}/412-maybe-copy-idea-config.bash ${RESOURCES}/idea-config "${VH}"/.config/JetBrains
 
 #heading Installing WebStorm
 #sudo -Hu vagrant ${BOOT}/420-install-webstorm.bash "$WEBSTORM_URL" "${VH}/tools"
