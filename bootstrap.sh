@@ -4,7 +4,7 @@ VH=/home/vagrant
 BOOT=/vagrant/boot
 RESOURCES=/vagrant/resources
 
-IDEA_URL='https://download-cf.jetbrains.com/idea/ideaIU-2020.1.2.tar.gz'
+IDEA_URL='https://download-cf.jetbrains.com/idea/ideaIU-2020.1.3.tar.gz'
 WEBSTORM_URL='https://download-cf.jetbrains.com/webstorm/WebStorm-2018.1.2.tar.gz'
 
 DOCKER_COMPOSER_VERSION=1.25.4
