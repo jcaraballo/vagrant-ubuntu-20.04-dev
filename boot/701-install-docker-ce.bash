@@ -2,7 +2,7 @@
 
 docker_user=$1
 
-apt-get install -y apt-transport-https ca-certificates curl software-properties-common && \
+apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common && \
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
 
 # We could verify that we have the fingerprint
@@ -10,12 +10,11 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
 # by running
 #     apt-key fingerprint 0EBFCD88
 
-# Using bionic for cosmic because there's no version for cosmic available atm
 add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
     $(lsb_release -cs) \
     stable" && \
 apt-get update && \
-apt-get install -y docker-ce && \
+apt-get install -y docker-ce docker-ce-cli containerd.io && \
 service docker start #&& \
 #usermod -aG docker ${docker_user}
