@@ -71,6 +71,9 @@ sudo -Hu vagrant ${BOOT}/521-as-vagrant-add-yarn-to-path.bash
 heading Installing elm
 sudo -Hu vagrant ${BOOT}/530-install-elm.bash
 
+heading Installing entr
+${BOOT}/601-as-root-install-entr.bash
+
 heading 'Installing heroku cli'
 ${BOOT}/620-install-heroku-cli.bash
 
