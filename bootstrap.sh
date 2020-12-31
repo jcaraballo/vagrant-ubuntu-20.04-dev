@@ -7,7 +7,7 @@ RESOURCES=/vagrant/resources
 IDEA_URL='https://download-cf.jetbrains.com/idea/ideaIU-2020.3.1.tar.gz'
 WEBSTORM_URL='https://download-cf.jetbrains.com/webstorm/WebStorm-2018.1.2.tar.gz'
 
-DOCKER_COMPOSER_VERSION=1.26.2
+DOCKER_COMPOSER_VERSION=1.27.4
 
 function heading(){
   echo ---------------------------- >&2
