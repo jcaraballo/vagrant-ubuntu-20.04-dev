@@ -9,8 +9,8 @@ created as described in [its GitHub project](https://github.com/jcaraballo/vagra
 
 * [Vagrant](https://www.vagrantup.com/downloads.html)
 ```
-wget https://releases.hashicorp.com/vagrant/2.2.9/vagrant_2.2.9_x86_64.deb
-sudo dpkg -i vagrant_2.2.9_x86_64.deb
+wget https://releases.hashicorp.com/vagrant/2.2.14/vagrant_2.2.14_x86_64.deb
+sudo dpkg -i vagrant_2.2.14_x86_64.deb
 ```
 
 * [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads)
