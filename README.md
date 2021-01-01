@@ -22,10 +22,10 @@ sudo apt-get update
 sudo apt-get install -y virtualbox-6.1 dkms
 ```
 
-* VirtualBox Guest Additions (6.1.10)
+* VirtualBox Guest Additions (6.1.16)
 ```
-wget https://download.virtualbox.org/virtualbox/6.1.10/Oracle_VM_VirtualBox_Extension_Pack-6.1.10.vbox-extpack
-VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.10.vbox-extpack
+wget https://download.virtualbox.org/virtualbox/6.1.16/Oracle_VM_VirtualBox_Extension_Pack-6.1.16.vbox-extpack
+VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.16.vbox-extpack
 ```
 
 ## Usage
