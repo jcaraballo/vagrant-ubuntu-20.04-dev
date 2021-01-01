@@ -17,11 +17,6 @@ function heading(){
 
 export DEBIAN_FRONTEND=noninteractive
 
-heading Installing curl
-${BOOT}/210-install-curl.bash
-
-${BOOT}/010-install-sbt-step-1-add-apt-sources.bash
-
 heading Updating apt sources
 until apt-get update ; do echo retrying updating apt sources... ; done
 
@@ -33,10 +28,17 @@ sudo -Hu vagrant ${BOOT}/101-maybe-set-up-ssh-keys.bash ${RESOURCES}/ssh-keys
 heading 'known_hosts set up'
 sudo -Hu vagrant ${BOOT}/102-set-up-known_hosts.bash github.com bitbucket.org
 
+heading Installing curl
+${BOOT}/210-install-curl.bash
+
 heading Installing jq
 ${BOOT}/212-as-root-install-jq.bash
+
 heading Installing sbt
+${BOOT}/010-install-sbt-step-1-add-apt-sources.bash
+until apt-get update ; do echo retrying updating apt sources... ; done
 ${BOOT}/220-install-sbt-step-2-apt-get-install.bash
+
 heading Installing tree
 ${BOOT}/230-install-tree.bash
 heading Installing gitk
