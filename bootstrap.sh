@@ -52,6 +52,9 @@ ${BOOT}/247-as-root-install-git-crypt.bash
 heading Installing Chromium
 ${BOOT}/250-as-root-install-chromium.bash
 
+heading Installing net-tools
+${BOOT}/260-as-root-install-net-tools.bash
+
 heading Installing openjdk
 ${BOOT}/302-as-root-install-openjdk.bash
 
