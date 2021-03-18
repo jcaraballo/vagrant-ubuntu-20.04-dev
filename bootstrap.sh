@@ -108,6 +108,9 @@ ${BOOT}/750-as-root-install-awscli.bash
 heading 'Installing influxdb client'
 ${BOOT}/760-as-root-install-influxdb-client.bash
 
+heading 'Installing terraform'
+${BOOT}/770-as-root-install-terraform.bash
+
 heading 'Installing Chinese Hong Kong Cantonese Jyutping input support'
 ${BOOT}/810-as-root-install-chinese-hongkong-jyutping-input.bash
 
