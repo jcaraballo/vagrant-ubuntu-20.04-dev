@@ -111,6 +111,9 @@ ${BOOT}/760-as-root-install-influxdb-client.bash
 heading 'Installing terraform'
 ${BOOT}/770-as-root-install-terraform.bash
 
+heading 'Installing Hashicorp vault'
+${BOOT}/771-as-root-install-vault.bash
+
 heading 'Installing Chinese Hong Kong Cantonese Jyutping input support'
 ${BOOT}/810-as-root-install-chinese-hongkong-jyutping-input.bash
 
