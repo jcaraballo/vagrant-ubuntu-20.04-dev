@@ -70,12 +70,12 @@ sudo -Hu vagrant ${BOOT}/412-maybe-copy-idea-config.bash ${RESOURCES}/idea-confi
 heading Installing Node
 ${BOOT}/510-install-node-all-users.bash
 
-heading Installing yarn
-${BOOT}/520-as-root-install-yarn.bash
-sudo -Hu vagrant ${BOOT}/521-as-vagrant-add-yarn-to-path.bash
+#heading Installing yarn
+#${BOOT}/520-as-root-install-yarn.bash
+#sudo -Hu vagrant ${BOOT}/521-as-vagrant-add-yarn-to-path.bash
 
-heading Installing elm
-sudo -Hu vagrant ${BOOT}/530-install-elm.bash
+#heading Installing elm
+#sudo -Hu vagrant ${BOOT}/530-install-elm.bash
 
 heading Installing entr
 ${BOOT}/601-as-root-install-entr.bash
