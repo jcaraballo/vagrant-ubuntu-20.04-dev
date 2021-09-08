@@ -7,7 +7,7 @@ RESOURCES=/vagrant/resources
 IDEA_URL='https://download-cdn.jetbrains.com/idea/ideaIU-2021.2.1.tar.gz'
 WEBSTORM_URL='https://download-cf.jetbrains.com/webstorm/WebStorm-2018.1.2.tar.gz'
 DOCKER_MACHINE_VERSION=0.16.2
-DOCKER_COMPOSER_VERSION=1.27.4
+DOCKER_COMPOSER_VERSION=1.29.2
 
 function heading(){
   echo ---------------------------- >&2
@@ -87,7 +87,7 @@ heading 'Installing Docker CE'
 ${BOOT}/701-install-docker-ce.bash vagrant
 
 heading 'Installing Docker Compose'
-${BOOT}/702-install-docker-compose.bash "$DOCKER_COMPOSER_VERSION"
+${BOOT}/702-as-root-install-docker-compose.bash "$DOCKER_COMPOSER_VERSION"
 
 heading 'Installing Docker Machine'
 ${BOOT}/703-as-root-install-docker-machine.bash "$DOCKER_MACHINE_VERSION"
