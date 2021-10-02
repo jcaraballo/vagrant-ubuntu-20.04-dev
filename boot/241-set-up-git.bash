@@ -19,4 +19,5 @@ fi
 
 git config --global push.default simple
 git config --global core.editor "vim"
+git config --global pull.rebase true
 
