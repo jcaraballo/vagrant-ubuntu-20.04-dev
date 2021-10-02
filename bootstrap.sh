@@ -55,6 +55,11 @@ ${BOOT}/250-as-root-install-chromium.bash
 heading Installing net-tools
 ${BOOT}/260-as-root-install-net-tools.bash
 
+heading Installing rbenv with ruby-build
+${BOOT}/270-as-root-install-rbenv.bash
+sudo -Hu vagrant ${BOOT}/271-as-vagrant-set-up-rbenv.bash
+sudo -Hu vagrant ${BOOT}/272-as-vagrant-install-ruby-build.bash
+
 heading Installing openjdk
 ${BOOT}/302-as-root-install-openjdk.bash
 
