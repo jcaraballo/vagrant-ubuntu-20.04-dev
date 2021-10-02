@@ -9,23 +9,24 @@ created as described in [its GitHub project](https://github.com/jcaraballo/vagra
 
 * [Vagrant](https://www.vagrantup.com/downloads.html)
 ```
-wget https://releases.hashicorp.com/vagrant/2.2.14/vagrant_2.2.14_x86_64.deb
-sudo dpkg -i vagrant_2.2.14_x86_64.deb
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+sudo apt-get update && sudo apt-get install vagrant
 ```
 
 * [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads)
 ```
-echo deb http://download.virtualbox.org/virtualbox/debian $( lsb_release -cs ) contrib | sudo tee -a /etc/apt/sources.list
+echo deb '[arch=amd64]' http://download.virtualbox.org/virtualbox/debian $( lsb_release -cs ) contrib | sudo tee -a /etc/apt/sources.list
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install -y virtualbox-6.1 dkms
 ```
 
-* VirtualBox Guest Additions (6.1.16)
+* VirtualBox Guest Additions (6.1.26)
 ```
-wget https://download.virtualbox.org/virtualbox/6.1.16/Oracle_VM_VirtualBox_Extension_Pack-6.1.16.vbox-extpack
-VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.16.vbox-extpack
+wget https://download.virtualbox.org/virtualbox/6.1.26/Oracle_VM_VirtualBox_Extension_Pack-6.1.26.vbox-extpack
+VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.26.vbox-extpack
 ```
 
 ## Usage
