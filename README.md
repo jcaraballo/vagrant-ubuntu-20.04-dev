@@ -76,12 +76,12 @@ git config --global user.name  >resources/git/name
 
 Add the configuration directory to `resources/idea-config/config` and the plugins to `resources/idea-config/plugins`
 
-For example, to copy the configuration from a host with Idea 2020.3 we would do:
+For example, to copy the configuration from a host with Idea 2021.2 we would do:
 ```
 mkdir -p resources/idea-config/config
-cp -iR ~/.config/JetBrains/IntelliJIdea2020.3 resources/idea-config/config/
+cp -iR ~/.config/JetBrains/IntelliJIdea2021.2 resources/idea-config/config/
 mkdir -p resources/idea-config/plugins
-cp -iR ~/.local/share/JetBrains/IntelliJIdea2020.3 resources/idea-config/plugins/
+cp -iR ~/.local/share/JetBrains/IntelliJIdea2021.2 resources/idea-config/plugins/
 ```
 
 #### (Optional) Update box
