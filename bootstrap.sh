@@ -122,6 +122,9 @@ ${BOOT}/770-as-root-install-terraform.bash
 heading 'Installing Hashicorp vault'
 ${BOOT}/771-as-root-install-vault.bash
 
+heading 'Installing Cloudfoundry CLI'
+${BOOT}/772-as-root-install-cloudfoundry-cli.bash
+
 heading 'Installing Chinese Hong Kong Cantonese Jyutping input support'
 ${BOOT}/810-as-root-install-chinese-hongkong-jyutping-input.bash
 
