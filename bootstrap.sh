@@ -88,6 +88,9 @@ ${BOOT}/601-as-root-install-entr.bash
 heading 'Installing heroku cli'
 ${BOOT}/620-install-heroku-cli.bash
 
+heading 'Installing gsutil'
+sudo -Hu vagrant ${BOOT}/630-as-vagrant-install-gsutil.bash
+
 heading 'Installing Docker CE'
 ${BOOT}/701-install-docker-ce.bash vagrant
 
